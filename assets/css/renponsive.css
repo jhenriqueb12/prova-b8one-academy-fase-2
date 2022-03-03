@@ -1,0 +1,80 @@
+/* Header */
+
+.header {
+  height: 48px;
+}
+
+.header-container {
+  padding: 0 20px;
+}
+
+.header-user__actions--name {
+  display: none;
+}
+
+.header-menu__hamburguer {
+  display: inline-block;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  padding: 6px 3px;
+}
+
+.header-menu__hamburguer--one {
+  width: 12px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  background: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.header-menu__hamburguer--two {
+  width: 18px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  background: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.header-menu__hamburguer--three {
+  width: 12px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  background: #FFFFFF;
+}
+
+.header-menu__hamburguer--one.toggle {
+  width: 18px;
+  transform: rotate(45deg) translate(7px, 5px);
+}
+
+.header-menu__hamburguer--two.toggle {
+  opacity: 0;
+}
+
+.header-menu__hamburguer--three.toggle {
+  width: 18px;
+  transform: rotate(-45deg) translate(6.5px, -4px);
+
+}
+
+/* --- User ---- */
+
+.header-user {
+  gap: 0 16px;
+}
+
+.header-user__actions--list {
+  gap: 0 18px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  display: none;
+}
+
+.active {
+  position: absolute;
+  display: inline-block;
+}
