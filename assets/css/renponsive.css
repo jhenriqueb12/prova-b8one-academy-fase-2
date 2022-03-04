@@ -68,13 +68,47 @@
   gap: 0 18px;
 }
 
+.header-user__actions--profile-arrow {
+  right: 8%;
+}
+
+.header-user__actions--profile:hover .header-user__actions--profile-content {
+  right: -10px;
+}
+
 /* Sidebar */
 
-.sidebar {
+.main-sidebar {
   display: none;
 }
 
 .active {
   position: absolute;
   display: inline-block;
+}
+
+/* Main Content */
+
+.main-content {
+  padding: 16px 16px 0;
+}
+
+/* Realeases */
+
+.content-realeases__info {
+  margin: 16px 20px;
+}
+
+.content-releases__info--text {
+  font-size: 14px;
+  width: 240px;
+}
+
+.content-releases__button--link {
+  display: none;
+}
+
+.content-report__text--paragrath {
+  display: flex;
+  flex-direction: column;
 }
