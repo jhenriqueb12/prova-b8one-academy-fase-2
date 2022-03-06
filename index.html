@@ -424,13 +424,14 @@
                   Último ano
                 </button>
               </li>
-              <li class="content-report__buttons--item">
-                <button class="content-report__buttons--btn content-report__buttons--arrow">
+              <li class="content-report__buttons--item content-report__buttons--item-date">
+                <input type="checkbox" id="content-report__buttons--btn-date" class="content-report__buttons--btn-date">
+                <label for="content-report__buttons--btn-date" class="content-report__buttons--btn">
                   Personalizado
                   <svg class="content-report__buttons--icon" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.00016 1.5L4.00016 4.5L7.00016 1.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                    
-                </button>
+                  </svg>
+                </label>
               </li>
             </ul>
           </div>
@@ -440,82 +441,389 @@
             </p>
           </div>
           <div class="content-report__graphic">
-            <div class="content-report__graphic--text">
-              <div class="content-report__graphic--heading">
-                <img src="./assets/img/graphic-report-image.png" alt="Graphic image" class="content-report__graphic--image">
-                <h3 class="content-report__graphic--title">
-                  Relatório geral
-                </h3>
+            <div class="content-report__graphic-container">
+              <div class="content-report__graphic--text">
+                <div class="content-report__graphic--heading">
+                  <img src="./assets/img/graphic-report-image.png" alt="Graphic image" class="content-report__graphic--image">
+                  <h3 class="content-report__graphic--title">
+                    Relatório geral
+                  </h3>
+                </div>
               </div>
-              <ul class="content-report__graphic--list">
-                <li class="content-report__graphic--item">
-                  <button class="content-report__graphic--button content-report__graphic--active">
-                    Vendas
-                  </button>
-                </li>
-                <li class="content-report__graphic--item">
-                  <button class="content-report__graphic--button">
-                    Pedidos
-                  </button>
-                </li>
-                <li class="content-report__graphic--item">
-                  <button class="content-report__graphic--button">
-                    Revendedores
-                  </button>
-                </li>
-              </ul>
+              <div class="content-report__graphic--menu">
+                <nav class="content-report__graphic--navbar">
+                  <ul class="content-report__graphic--list">
+                    <li class="content-report__graphic--item">
+                      <input type="radio" id="content-report__graphic--button-one" class="content-report__graphic--button" name="content-report__graphic--button" checked>
+                      <label for="content-report__graphic--button-one" class="content-report__graphic--label">
+                        Vendas
+                      </label>
+                      <div class="content-report__graphic--content">
+                        <div class="content-report__graphic--container-one">
+                          <div class="content-report__graphic--content-box">
+                            <svg class="content-report__graphic--content-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="48" height="48" rx="12" fill="#F1F2F9"/>
+                              <path d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z" fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="content-report__graphic--content-text">
+                              <span class="content-report__graphic--content-title">
+                                Faturamento
+                              </span>
+                              <span class="content-report__graphic--content-number">
+                                R$ 800.803,00
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content-report__graphic--content-box">
+                            <svg class="content-report__graphic--content-icon" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.666656" width="48" height="48" rx="12" fill="#F1F2F9"/>
+                              <path d="M17.5 12L13.6667 16.8V33.6C13.6667 34.2365 13.9359 34.847 14.4152 35.2971C14.8944 35.7471 15.5444 36 16.2222 36H34.1111C34.7889 36 35.4389 35.7471 35.9182 35.2971C36.3974 34.847 36.6667 34.2365 36.6667 33.6V16.8L32.8333 12H17.5Z" fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M13.6667 16.8002H36.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M30.2781 21.5999C30.2781 22.8739 29.7396 24.0957 28.7811 24.9965C27.8226 25.8974 26.5226 26.4035 25.167 26.4035C23.8115 26.4035 22.5114 25.8974 21.5529 24.9965C20.5944 24.0957 20.0559 22.8739 20.0559 21.5999" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                          
+                            <div class="content-report__graphic--content-text">
+                              <span class="content-report__graphic--content-title">
+                                Vendas totais
+                              </span>
+                              <span class="content-report__graphic--content-number">
+                                1830
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content-report__graphic--content-box">
+                            <svg class="content-report__graphic--content-icon" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.333313" width="48" height="48" rx="12" fill="#F1F2F9"/>
+                              <path d="M37.8577 27.5374L27.8846 37.5105C27.6262 37.7691 27.3194 37.9743 26.9817 38.1143C26.644 38.2543 26.282 38.3264 25.9164 38.3264C25.5508 38.3264 25.1888 38.2543 24.8511 38.1143C24.5134 37.9743 24.2066 37.7691 23.9482 37.5105L12.5866 26.1621C12.211 25.7869 12 25.2779 12 24.747V13.6667C12 12.5621 12.8954 11.6667 14 11.6667H25.081C25.6114 11.6667 26.1202 11.8774 26.4952 12.2524L37.8577 23.6149C38.3758 24.1361 38.6666 24.8412 38.6666 25.5761C38.6666 26.3111 38.3758 27.0161 37.8577 27.5374Z" fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20 19.6667H20.0133" stroke="#425DC7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                          
+                            <div class="content-report__graphic--content-text">
+                              <span class="content-report__graphic--content-title">
+                                Ticket médio
+                              </span>
+                              <span class="content-report__graphic--content-number">
+                                R$ 437,59
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <canvas class="content-report__graphic--one"></canvas>
+                      </div>
+                    </li>
+                    <li class="content-report__graphic--item">
+                      <input type="radio" id="content-report__graphic--button-two" class="content-report__graphic--button" name="content-report__graphic--button">
+                      <label for="content-report__graphic--button-two" class="content-report__graphic--label">
+                        Pedidos
+                      </label>
+                      <div class="content-report__graphic--content">
+                        <div class="content-report__graphic--container-two">
+                          <canvas class="content-report__graphic--two"></canvas>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="content-report__graphic--item content-report__graphic--tab">
+                      <input type="radio" id="content-report__graphic--button-three" class="content-report__graphic--button" name="content-report__graphic--button">
+                      <label for="content-report__graphic--button-three" class="content-report__graphic--label">
+                        Revendedores
+                      </label>
+                      <div class="content-report__graphic--content">
+                        <div class="content-report__graphic--container-three">
+                          <div class="content-report__graphic--container-input">
+                            <input type="checkbox" id="content-report__graphic--categories" class="content-report__graphic--categories-input">
+                            <label for="content-report__graphic--categories" class="content-report__graphic--categories-label">
+                              Mostrar
+                              <span class="content-report__graphic--categories-text">
+                                todos os revendedores
+                              </span>
+                              <svg class="content-report__graphic--categories-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.50024 9.75L12.0002 14.25L16.5002 9.75" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </label>
+                            <div class="content-report__graphic--categories-box">
+                              <input type="radio" id="content-report__graphic--box-one" class="content-report__graphic--box-input" name="content-report__graphic--box-input" checked>
+                              <label for="content-report__graphic--box-one" class="content-report__graphic--box-label">
+                                todos os revendedores
+                              </label>
+                              <input type="radio" id="content-report__graphic--box-two" class="content-report__graphic--box-input" name="content-report__graphic--box-input">
+                              <label for="content-report__graphic--box-two" class="content-report__graphic--box-label">
+                                maiores vendas
+                              </label>
+                              <input type="radio" id="content-report__graphic--box-three" class="content-report__graphic--box-input" name="content-report__graphic--box-input">
+                              <label for="content-report__graphic--box-three" class="content-report__graphic--box-label">
+                                menores vendas
+                              </label>
+                            </div>
+                          </div>
+                          <canvas class="content-report__graphic--three"></canvas>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <div class="content-report__graphic--box">
-              <div class="content-report__graphic--box-results">
-                <svg class="content-report__graphic--box-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="48" height="48" rx="12" fill="#F1F2F9"/>
-                  <path d="M24 37.3333C31.3638 37.3333 37.3333 31.3638 37.3333 24C37.3333 16.6362 31.3638 10.6667 24 10.6667C16.6362 10.6667 10.6667 16.6362 10.6667 24C10.6667 31.3638 16.6362 37.3333 24 37.3333Z" fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M28 18.6667H22.8889C21.2933 18.6667 20 19.8606 20 21.3333C20 22.8061 21.2933 24 22.8889 24H25.1111C26.7067 24 28 25.1938 28 26.6667C28 28.1395 26.7067 29.3333 25.1111 29.3333H20" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M24 16V18.6667" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M24 29.3333L24 32" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <div class="content-report__graphic--box-text">
-                  <span class="content-report__graphic--box-title">
-                    Faturamento
-                  </span>
-                  <span class="content-report__graphic--box-number">
-                    R$ 800.803,00
-                  </span>
+            <aside class="content-report__graphic--ranking">
+              <div class="content-report__graphic--text">
+                <img src="./assets/img/graphic-ranking-image.png" alt="troph" class="content-report__graphic--text-image">
+                <span class="content-report__graphic--text-title">
+                  Ranking de revendedores
+                </span>
+              </div>
+              <div class="content-report__graphic--ranking-dealer">
+                <ul class="content-report__graphic--ranking-list">
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                  <li class="content-report__graphic--dealer">
+                    <div class="content-report__graphic--dealer-podium">
+                      <span class="content-report__graphic--dealer-number">
+                        1°
+                      </span>
+                      <svg class="content-report__graphic--dealer-avatar" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="20" fill="#F1F2F9"/>
+                        <path d="M10.6847 26V14.3636H12.4403V19.4205H18.2415V14.3636H20.0028V26H18.2415V20.9261H12.4403V26H10.6847ZM22.5597 26V14.3636H26.7074C27.6089 14.3636 28.357 14.5189 28.9517 14.8295C29.5502 15.1402 29.9972 15.5701 30.2926 16.1193C30.5881 16.6648 30.7358 17.2955 30.7358 18.0114C30.7358 18.7235 30.5862 19.3504 30.2869 19.892C29.9915 20.4299 29.5445 20.8485 28.946 21.1477C28.3513 21.447 27.6032 21.5966 26.7017 21.5966H23.5597V20.0852H26.5426C27.1108 20.0852 27.5729 20.0038 27.929 19.8409C28.2888 19.678 28.5521 19.4413 28.7188 19.1307C28.8854 18.8201 28.9688 18.447 28.9688 18.0114C28.9688 17.572 28.8835 17.1913 28.7131 16.8693C28.5464 16.5473 28.2831 16.3011 27.9233 16.1307C27.5672 15.9564 27.0994 15.8693 26.5199 15.8693H24.3153V26H22.5597ZM28.304 20.75L31.179 26H29.179L26.3608 20.75H28.304Z" fill="#425DC7"/>
+                      </svg>                                    
+                      <div class="content-report__graphic--dealer-data">
+                        <span class="content-report__graphic--dealer-name">
+                          Henrique Ramos
+                        </span>
+                        <span class="content-report__graphic--dealer-requests">
+                          980 pedidos
+                        </span>
+                      </div>
+                    </div>
+                    <div class="content-report__graphic--dealer-result">
+                      <span class="content-report__graphic--dealer-percent">
+                        18%
+                      </span>
+                      <svg class="content-report__graphic--dealer-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9998 9.5L7.99976 6.5L4.99976 9.5" stroke="#158F2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>    
+                    </div>                            
+                  </li>
+                </ul>
+                <div class="content-report__graphic--ranking-all">
+                  <a href="#" class="content-report__graphic--ranking-link">
+                    Ver todos
+                  </a>
                 </div>
               </div>
-              <div class="content-report__graphic--box-results">
-                <svg class="content-report__graphic--box-icon" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.666656" width="48" height="48" rx="12" fill="#F1F2F9"/>
-                  <path d="M17.5 12L13.6667 16.8V33.6C13.6667 34.2365 13.9359 34.847 14.4152 35.2971C14.8944 35.7471 15.5444 36 16.2222 36H34.1111C34.7889 36 35.4389 35.7471 35.9182 35.2971C36.3974 34.847 36.6667 34.2365 36.6667 33.6V16.8L32.8333 12H17.5Z" fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.6667 16.8002H36.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M30.2781 21.5999C30.2781 22.8739 29.7396 24.0957 28.7811 24.9965C27.8226 25.8974 26.5226 26.4035 25.167 26.4035C23.8115 26.4035 22.5114 25.8974 21.5529 24.9965C20.5944 24.0957 20.0559 22.8739 20.0559 21.5999" stroke="#425DC7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                  
-                <div class="content-report__graphic--box-text">
-                  <span class="content-report__graphic--box-title">
-                    Vendas totais
-                  </span>
-                  <span class="content-report__graphic--box-number">
-                    1830
-                  </span>
-                </div>
-              </div>
-              <div class="content-report__graphic--box-results">
-                <svg class="content-report__graphic--box-icon" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.333313" width="48" height="48" rx="12" fill="#F1F2F9"/>
-                  <path d="M37.8577 27.5374L27.8846 37.5105C27.6262 37.7691 27.3194 37.9743 26.9817 38.1143C26.644 38.2543 26.282 38.3264 25.9164 38.3264C25.5508 38.3264 25.1888 38.2543 24.8511 38.1143C24.5134 37.9743 24.2066 37.7691 23.9482 37.5105L12.5866 26.1621C12.211 25.7869 12 25.2779 12 24.747V13.6667C12 12.5621 12.8954 11.6667 14 11.6667H25.081C25.6114 11.6667 26.1202 11.8774 26.4952 12.2524L37.8577 23.6149C38.3758 24.1361 38.6666 24.8412 38.6666 25.5761C38.6666 26.3111 38.3758 27.0161 37.8577 27.5374Z" fill="#CDD2EB" stroke="#CDD2EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M20 19.6667H20.0133" stroke="#425DC7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                  
-                <div class="content-report__graphic--box-text">
-                  <span class="content-report__graphic--box-title">
-                    Ticket médio
-                  </span>
-                  <span class="content-report__graphic--box-number">
-                    R$ 437,59
-                  </span>
-                </div>
-              </div>
-            </div>
-            <canvas class="content-report__graphic--chart"></canvas>
+            </aside>
           </div>
         </div>
       </section>

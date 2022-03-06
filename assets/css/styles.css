@@ -517,8 +517,7 @@ body {
 .main-content {
   width: min(100%, 1132px);
   height: 100%;
-  padding: 16px 32px 32px;
-  margin: 0 auto;
+  margin: 16px 32px 32px 32px;
 }
 
 /* Realeases */
@@ -604,10 +603,24 @@ body {
   transition: all .3s ease-in-out;
 }
 
+.content-report__buttons--icon {
+  margin-left: 4px;
+}
+
 .content-report__buttons--btn:hover, .content-report__buttons--btn:hover path {
   background: #425DC7;
   color: #FFFFFF;
   stroke: #FFFFFF;
+}
+
+.content-report__buttons--item-date {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.content-report__buttons--btn-date {
+  display: none;
 }
 
 .content-report__buttons--active {
@@ -641,15 +654,11 @@ body {
   border-radius: 8px;
   background: #FFFFFF;
   padding: 24px;
+  position: relative;
 }
 
-.content-report__graphic--chart {
-  max-width: 100%;
-  max-height: 228px;
-}
-
-.content-report__graphic--text {
-  border-bottom: 1px solid #EEEEEE;
+.content-report__graphic-container .content-report__graphic--tab {
+  width: 680px;
 }
 
 .content-report__graphic--heading {
@@ -666,78 +675,291 @@ body {
   color: #000000;
 }
 
+.content-report__graphic--menu {
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 12px;
+}
+
 .content-report__graphic--list {
   display: flex;
   gap: 0 24px;
+  position: relative;
 }
 
-.content-report__graphic--button {
-  background: transparent;
-  border: none;
+.content-report__graphic--label {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.005em;
   color: #555555;
+  padding-bottom: 12px;
   cursor: pointer;
 }
 
-.content-report__graphic--active {
-  color: #425DC7;
-  border-bottom: 2px solid #425DC7;
-  padding-bottom: 14px;
+.content-report__graphic--button {
+  display: none;
+  position: absolute;
 }
 
-.content-report__graphic--button:hover {
+.content-report__graphic--button:checked + .content-report__graphic--label {
   color: #425DC7;
   border-bottom: 2px solid #425DC7;
-  padding-bottom: 14px;
 }
 
-.content-report__graphic--box {
-  padding: 24px 0 48px 0;
+.content-report__graphic--content {
+  display: none;
+  width: 100%;
+  height: 395px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+.content-report__graphic--button:checked ~ .content-report__graphic--content {
+  display: block;
+}
+
+.content-report__graphic--container-one {
   display: flex;
-  justify-content: space-between;
   gap: 0 16px;
+  margin: 24px 0 48px 0;
 }
 
-.content-report__graphic--box-results {
-  width: min(100%, 350px);
-  height: 72px;
+.content-report__graphic--content-box {
   display: flex;
   align-items: center;
   gap: 0 16px;
+  width: 350px;
+  height: 72px;
   border: 2px solid #F1F2F9;
   border-radius: 12px;
 }
 
-.content-report__graphic--box-icon {
+.content-report__graphic--content-icon {
   margin-left: 12px;
 }
 
-.content-report__graphic--box-text {
+.content-report__graphic--content-text {
   display: flex;
   flex-direction: column;
 }
 
-.content-report__graphic--box-title {
-  font-weight: 400;
+.content-report__graphic--content-title {
+  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-  display: flex;
   align-items: center;
   letter-spacing: -0.005em;
   color: #555555;
 }
 
-.content-report__graphic--box-number {
+.content-report__graphic--content-number {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  display: flex;
   align-items: center;
   letter-spacing: -0.005em;
   color: #333333;
+}
+
+.content-report__graphic--one {
+  width: 100%;
+  max-height: 228px;
+}
+
+.content-report__graphic--two {
+  width: 100%;
+  max-height: 324px;
+  margin-top: 48px;
+}
+
+.content-report__graphic--three {
+  max-width: 680px;
+  max-height: 290px;
+  margin-top: 24px;
+}
+
+.content-report__graphic--container-input {
+  margin-top: 16px;
+}
+
+.content-report__graphic--categories-input {
+  display: none;
+}
+
+.content-report__graphic--categories-label {
+  width: 280px;
+  height: 40px;
+  border: 1px solid #999999;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  color: #999999;
+  position: relative;
+}
+
+.content-report__graphic--categories-text {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  color: #000000;
+}
+
+.content-report__graphic--categories-box {
+  display: none;
+}
+
+.content-report__graphic--categories-input:checked
+ ~ .content-report__graphic--categories-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 0;
+  width: 280px;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 8px;
+  background: #FFFFFF;
+  padding: 14px;
+}
+
+.content-report__graphic--box-label {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.005em;
+  color: #000000;
+  position: relative;
+  cursor: pointer;
+}
+
+.content-report__graphic--box-input {
+  display: none;
+}
+
+.content-report__graphic--box {
+  display: flex;
+}
+
+.content-report__graphic--ranking {
+  display: none;
+}
+
+.content-report__graphic--ranking-active.content-report__graphic--ranking {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  width: 340px;
+  height: 429px;
+  border: 2px solid #F1F2F9;
+  background: #FFFFFF;
+  border-radius: 8px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.content-report__graphic--text {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  margin-bottom: 24px;
+}
+
+.content-report__graphic--text-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.content-report__graphic--ranking-dealer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  align-items: flex-end;
+}
+
+.content-report__graphic--ranking-list {
+  width: 100%;
+  height: 244px;
+  border-bottom: 1px solid #F1F2F9;
+  margin-bottom: 24px;
+  overflow-y: scroll;
+}
+
+.content-report__graphic--dealer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.content-report__graphic--dealer-podium {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+
+.content-report__graphic--dealer-number {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.content-report__graphic--dealer-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-report__graphic--dealer-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.content-report__graphic--dealer-requests {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  color: #555555;
+}
+
+.content-report__graphic--dealer-result {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-left: 24px;
+}
+
+.content-report__graphic--dealer-percent {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  color: #158F2E;
+}
+
+.content-report__graphic--ranking-link {
+  padding: 8px 16px;
+  width: 98px;
+  height: 40px;
+  border: 1.5px solid #425DC7;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #425DC7;
 }
 
 /* Content Insights */
@@ -923,4 +1145,10 @@ body {
   display: flex ;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 1440px){
+  .main-content {
+    margin: 0 auto;
+  }
 }
