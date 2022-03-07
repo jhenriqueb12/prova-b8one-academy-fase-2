@@ -9,12 +9,12 @@ const hamburguerTwo = document.querySelector(".header-menu__hamburguer--two")
 const hamburguerThree = document.querySelector(".header-menu__hamburguer--three")
 
 hamburguerMenu.addEventListener('click', () =>{
-
+  
   sidebar.classList.toggle("active", menu)
   hamburguerTwo.classList.toggle("toggle", menu)
   hamburguerOne.classList.toggle("toggle", menu)
-  hamburguerThree.classList.toggle("toggle", menu)
-
+  hamburguerThree.classList.toggle("toggle", menu)  
+  
   menu = !menu
 })
 
@@ -188,13 +188,4 @@ biggestSale.addEventListener('click', () => {
 lowestSale.addEventListener('click', () => {
 
     text.innerHTML = 'menores vendas'
-})
-
-const buttonSellers = document.getElementById('content-report__graphic--button-three')
-
-
-buttonSellers.addEventListener('click', () => {
-
-    document.querySelector('.content-report__graphic--ranking').classList.add('content-report__graphic--ranking-active')
-
 })
