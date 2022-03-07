@@ -89,14 +89,14 @@
 
 .main-sidebar {
   display: none;
-  top: 48px;
-  z-index: 1000;
-  height: calc(100vh - 48px);
 }
 
 .active {
-  position: absolute;
-  display: inline-block;
+  position: fixed;
+  top: 48px;
+  z-index: 1000;
+  height: calc(100vh - 48px);
+  display: block;
 }
 
 /* Main Content */
@@ -121,7 +121,7 @@
 
 .content-releases__info--text {
   font-size: 14px;
-  width: 240px;
+  width: 100%;
 }
 
 .content-releases__button--link {
@@ -168,8 +168,7 @@
 }
 
 .content-report__graphic--content--three {
-  max-height: 780px; 
- /* resolver isso */
+  height: 100%;
 }
 
 .content-report__graphic--container-three {
@@ -194,8 +193,8 @@
 }
 
 .content-report__graphic--ranking {
-  display: none;
   position: static;
+  align-items: flex-end;
 }
 
 /* Content Insights */
@@ -211,15 +210,12 @@
 }
 
 .content-insights__text {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
 .content-insights__heading--title {
   font-size: 20px;
-}
-
-.content-insights__text {
-  font-size: 16px;
 }
 
 .content-insights__table--list {
@@ -236,6 +232,7 @@
   justify-content: space-between;
   padding: 8px;
   border-radius: 8px;
+  margin-top: 8px;
 }
 
 .content-insights__table--cell-order {
@@ -263,5 +260,4 @@
   align-items: center;
   justify-content: center;
   gap: 16px 0;
-  margin-top: 400px;
 }
