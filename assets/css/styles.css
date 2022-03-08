@@ -798,18 +798,18 @@ body::-webkit-scrollbar-thumb {
   color: #333333;
 }
 
-.content-report__graphic--one {
+.content-report__graphic--sales {
   width: 100%;
   max-height: 228px;
 }
 
-.content-report__graphic--two {
+.content-report__graphic--resquests {
   width: 100%;
   max-height: 324px;
   margin-top: 48px;
 }
 
-.content-report__graphic--three {
+.content-report__graphic--resellers {
   max-width: 680px;
   max-height: 290px;
   margin-top: 24px;

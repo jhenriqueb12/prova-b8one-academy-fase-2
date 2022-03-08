@@ -184,11 +184,11 @@
   font-size: 14px;
 }
 
-.content-report__graphic--one  {
+.content-report__graphic--sales  {
   max-height: 100%;
 }
 
-.content-report__graphic--three  {
+.content-report__graphic--resellers  {
   max-height: 296px;
 }
 
