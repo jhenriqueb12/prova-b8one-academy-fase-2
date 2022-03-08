@@ -635,32 +635,28 @@ body::-webkit-scrollbar-thumb {
   line-height: 16px;
   color: #333333;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .content-report__buttons--icon {
   margin-left: 4px;
 }
 
+.content-report__buttons--input:checked +
+.content-report__buttons--btn,
 .content-report__buttons--btn:hover, .content-report__buttons--btn:hover path {
   background: #425DC7;
+  stroke: #FFFFFF;
   color: #FFFFFF;
+}
+
+.content-report__buttons--input:checked +
+.content-report__buttons--btn path {
   stroke: #FFFFFF;
 }
 
-.content-report__buttons--item-date {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.content-report__buttons--btn-date {
+.content-report__buttons--input {
   display: none;
-}
-
-.content-report__buttons--active {
-  background: #425DC7;
-  color: #FFFFFF;
 }
 
 .content-report__buttons--arrow {

@@ -405,28 +405,32 @@
           <div class="content-report__buttons">
             <ul class="content-report__buttons--list">
               <li class="content-report__buttons--item">
-                <button class="content-report__buttons--btn content-report__buttons--active">
+                <input type="radio" name="content-report__buttons--input" class="content-report__buttons--input" id="content-report__buttons--input-one" checked>
+                <label for="content-report__buttons--input-one" class="content-report__buttons--btn">
                   Últimos 7 dias
-                </button>
+                </label>
               </li>
               <li class="content-report__buttons--item">
-                <button class="content-report__buttons--btn">
+                <input type="radio" name="content-report__buttons--input" class="content-report__buttons--input" id="content-report__buttons--input-two">
+                <label for="content-report__buttons--input-two" class="content-report__buttons--btn">
                   Últimos 15 dias
-                </button>
+                </label>
               </li>
               <li class="content-report__buttons--item">
-                <button class="content-report__buttons--btn">
+                <input type="radio" name="content-report__buttons--input" class="content-report__buttons--input" id="content-report__buttons--input-three">
+                <label for="content-report__buttons--input-three" class="content-report__buttons--btn">
                   Último mês
-                </button>
+                </label>
               </li>
               <li class="content-report__buttons--item">
-                <button class="content-report__buttons--btn">
+                <input type="radio" name="content-report__buttons--input" class="content-report__buttons--input" id="content-report__buttons--input-four">
+                <label for="content-report__buttons--input-four" class="content-report__buttons--btn">
                   Último ano
-                </button>
+                </label>
               </li>
               <li class="content-report__buttons--item content-report__buttons--item-date">
-                <input type="checkbox" id="content-report__buttons--btn-date" class="content-report__buttons--btn-date">
-                <label for="content-report__buttons--btn-date" class="content-report__buttons--btn">
+                <input type="radio" name="content-report__buttons--input" class="content-report__buttons--input" id="content-report__buttons--input-five">
+                <label for="content-report__buttons--input-five" class="content-report__buttons--btn">
                   Personalizado
                   <svg class="content-report__buttons--icon" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.00016 1.5L4.00016 4.5L7.00016 1.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -509,7 +513,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="content-report__graphic--one"></div>
+                        <canvas class="content-report__graphic--one"></canvas>
                       </div>
                     </li>
                     <li class="content-report__graphic--item">
@@ -1192,61 +1196,7 @@
       </section>
   </main>
   <script src="./assets/js/main.js"></script>
-
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['line']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = new google.visualization.DataTable();
-        data.addColumn('number', '');
-        data.addColumn('number', '');
-        data.addColumn('number', '');
-        data.addColumn('number', '');
-
-        data.addRows([
-          [1,  37.8, 80.8, 41.8],
-          [2,  30.9, 69.5, 32.4],
-          [3,  25.4,   57, 25.7],
-          [4,  11.7, 18.8, 10.5],
-          [5,  11.9, 17.6, 10.4],
-          [6,   8.8, 13.6,  7.7],
-          [7,   7.6, 12.3,  9.6],
-          [8,  12.3, 29.2, 10.6],
-          [9,  16.9, 42.9, 14.8],
-          [10, 12.8, 30.9, 11.6],
-          [11,  5.3,  7.9,  4.7],
-          [12,  6.6,  8.4,  5.2],
-          [13,  4.8,  6.3,  3.6],
-          [14,  4.2,  6.2,  3.4]
-        ]);
-
-        var options = {
-          chart: {
-            
-          },
-
-          legend: {
-            position: 'bottom',
-            alignment: 'end',
-            orientation: 'vertical'
-          },
-
-          width: 900,
-          height: 228,
-          axes: {
-            x: {
-              0: {side: 'bottom'}
-            }
-          }
-        };
-
-        var chart = new google.charts.Line(document.querySelector('.content-report__graphic--one'));
-
-        chart.draw(data, google.charts.Line.convertOptions(options));
-      }
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/graphics.js"></script>
 </body>
 </html>
