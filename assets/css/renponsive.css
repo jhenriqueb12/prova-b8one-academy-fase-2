@@ -5,7 +5,7 @@
 }
 
 .header-container {
-  padding: 0 20px;
+  padding: 0 16px 0 20px;
 }
 
 .header-user__actions--name {
@@ -17,7 +17,7 @@
   margin-right: 16px;
   width: 24px;
   height: 24px;
-  padding: 6px 3px;
+  margin-top: 8px;
 }
 
 .header-menu__hamburguer--one {
@@ -138,6 +138,23 @@
 .content-report {
   width: 100%;
   height: 550px;
+  margin-bottom: 16px;
+}
+
+.content-report__buttons {
+  overflow: overlay;
+}
+
+.content-report__buttons--list {
+  margin-bottom: 8px;
+}
+
+.content-report__text--paragrath {
+  margin-bottom: 10px;
+}
+
+.content-report__buttons::-webkit-scrollbar {
+  background: transparent;
 }
 
 .content-report__graphic {
@@ -146,20 +163,28 @@
   padding: 16px;
 }
 
+.content-report__graphic--label {
+  font-size: 14px;
+}
+
+.content-report__graphic--list {
+  gap: 0 16px;
+}
+
 .content-report__graphic--content {
   width: 100%;
   max-height: 300px;
-  overflow-x: scroll;
+  overflow: overlay;
 }
 
-.content-report__buttons {
-  overflow-x: scroll;
+.content-report__graphic--content::-webkit-scrollbar {
+  background: transparent;
 }
 
 .content-report__graphic--container-one {
   width: 620px;
   height: 64px;
-  margin: 16px 0 24px 16px;
+  margin: 16px 0 24px 0;
 }
 
 .content-report__graphic--content-box {
@@ -184,17 +209,28 @@
   font-size: 14px;
 }
 
-.content-report__graphic--sales  {
-  max-height: 100%;
+.content-report__graphic--resellers  {
+  max-width: 100%;
+  max-height: 228px;
 }
 
-.content-report__graphic--resellers  {
-  max-height: 296px;
+.content-report__graphic--container-input {
+  margin: 0;
+}
+
+.content-report__graphic--categories-label {
+  display: none;
 }
 
 .content-report__graphic--ranking {
   position: static;
-  align-items: flex-end;
+  max-width: 100%;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.content-report__graphic--dealer-result {
+  margin: 0;
 }
 
 /* Content Insights */

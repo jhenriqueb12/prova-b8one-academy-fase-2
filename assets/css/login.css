@@ -12,7 +12,7 @@ body {
 /* Login */
 
 .login {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -21,7 +21,6 @@ body {
 
 .login__container {
   width: min(100%, 432px);
-  height: min(100%, 500px);
   background: #FFFFFF;
   border-radius: 16px;
   padding: 48px 32px 48px 48px;
@@ -68,7 +67,7 @@ body {
   flex-direction: column;
 }
 
-.login__field--label {
+.login__field--label-email, .login__field--label-password {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -90,7 +89,6 @@ body {
   border-radius: 8px;
   padding-left: 16px;
   margin-top: 8px;
-  position: relative;
 }
 
 .login__email--error, .login__password--error {
@@ -98,7 +96,7 @@ body {
   font-size: 12px;
   line-height: 16px;
   color: #F03460;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .login__active--error {
@@ -121,17 +119,13 @@ body {
 .login__field--connect-check {
   display: flex;
   align-items: center;
-  gap: 0 8px;
+  gap: 0 4px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.005em;
   color: #000000;
-}
-
-.login__field--connect-input {
   position: relative;
-  cursor: pointer;
 }
 
 .login__field--connect-link {
@@ -163,7 +157,6 @@ body {
 @media (max-width: 768px){
   .login__container {
     width: min(100%, 328px);
-    height: 428px;
     padding: 32px 16px 16px 16px;
     gap: 24px 0;
   }
@@ -187,13 +180,6 @@ body {
 
   .login__field--input-email, .login__field--input-password {
     width: 296px;
-    position: relative;
-  }
-
-  .login__email--error {
-    position: absolute;
-    top: 52%;
-    left: 9%;
   }
 
   .login__field--connect-box {
