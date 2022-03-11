@@ -19,7 +19,7 @@ form.addEventListener('submit', (event) => {
   
   for(i = 0; i < userList.length; i++){
     if(inputEmail.value === userList[i].email && inputPassword.value === userList[i].password){
-      window.location.href = "../../assets/dashboard.html"
+      window.location.href = "assets/dashboard.html"
     }else if(inputEmail.value !== userList[i].email){
       emailError.innerHTML = "Este e-mail não existe, você tem outro?"
       inputEmail.classList.add('login__active--error')
